@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap eCommerce Template</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="file:///Macintosh HD/Users/lijialei/Downloads/知乎数据库-Excel导入功能/知乎数据库/知乎数据库/css/bootstrap.css">
+<link rel="stylesheet" href="file:///Macintosh HD/Users/lijialei/Downloads/知乎数据库-Excel导入功能/知乎数据库/知乎数据库/css/data.css">
+<script src="file:///Macintosh HD/Users/lijialei/Downloads/知乎数据库-Excel导入功能/知乎数据库/知乎数据库/js/jquery-3.4.1.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style>
+@font-face {
+	font-family: 'fzyt';
+ src:url(fonts/方正姚体.TTF);
+}
+@font-face {
+	font-family: 'ysjt';
+ src : url(fonts/方正颜宋简体-中.TTF);
+}
+</style>
+</head>
+<body>
+<div class="container fengmian" >
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+      <h1>得了罕见病是一种怎样的体验？</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+      <p class="shuoming">我们爬取了知乎上“得了罕见病是一种怎样的体验？”问题下的1000个回答，点击每一个方块可以看到具体的描述。</p>
+    </div>
+  </div>
+   <div class="container" id="mulu">
+  <div class="row shenfen select" id="div_SF">
+    <div class="col-sm-1ths col-md-1ths col-lg-1ths col-xs-1ths main">
+      <p>答主身份</p>
+    </div>
+    <div class="tag" id="tag-ziji">
+      <p>患者自己</p>
+    </div> 
+    <div class="tag" id="tag-jiashu">
+     <p>患者家属</p>
+	</div>
+    <div class="tag" id="tag-pangguan">
+      <p>旁观者</p>
+    </div>
+    
+  </div>
+  <div class="row zhengzhuang select" id="div_ZZ">
+    <div class="col-sm-1ths col-md-1ths col-lg-1ths col-xs-1ths main">
+      <p>症状</p>
+    </div>
+    <div class="tag" id="tag-xingdong">
+      <p>行动受限</p>
+    </div>
+    <div class="tag" id="tag-yinshi">
+      <p>饮食受限</p>
+    </div>
+    <div class="tag" id="tag-xingxiang">
+      <p>形象受损</p>
+    </div>
+    <div class="tag" id="tag-jingshen">
+      <p>精神智力问题</p>
+    </div>
+    <div class="tag" id="tag-qita">
+      <p>其他</p>
+    </div>
+  </div>
+  <div class="row zhiliaoKJ select">
+    <div class="col-sm-1ths col-md-1ths col-lg-1ths col-xs-1ths main">
+      <p>治疗困境</p>
+    </div>
+      <div class="tag" id="tag-quezhen">
+        <p>难以确诊</p>
+      </div>
+    <div class="tag" id="tag-zhiyu">
+      <p>无法治愈</p>
+    </div>
+    <div class="tag" id="tag-feiyong">
+      <p>费用昂贵</p>
+    </div>
+    <div class="tag" id="tag-bingfa">
+      <p>并发症</p>
+    </div>
+    <div class="tag" id="tag-yao">
+      <p>无药</p>
+    </div>
+    <div class="tag" id="tag-ziyuan">
+      <p>医疗资源分布不均</p>
+    </div>
+    <div class="tag" id="tag-taidu">
+      <p>医生态度问题</p>
+    </div>
+    <div class="tag" id="tag-zhichi">
+      <p>家庭不支持</p>
+    </div>
+  </div>
+   <div class="row zhengzhuang select" id="div_RH">
+    <div class="col-sm-1ths col-md-1ths col-lg-1ths col-xs-1ths main">
+      <p>社会融合</p>
+    </div>
+    <div class="tag" id="tag-qishi">
+      <p>歧视与不尊重</p>
+    </div>
+    <div class="tag" id="tag-banlv">
+      <p>影响恋爱结婚</p>
+    </div>
+    <div class="tag" id="tag-shengyu">
+      <p>影响生子</p>
+    </div>
+    <div class="tag" id="tag-gongzuo">
+      <p>影响工作</p>
+    </div>
+    <div class="tag" id="tag-jiaoyu">
+      <p>影响教育</p>
+    </div>
+  </div>
+  
+</div>
+</div>
+<!--<div class="content" id="content1"></div>-->
+
+<!-- <div class="container" id="div_person" > -->
+  <!-- <div class="m-1 float-left col-sm-4 col-md-5ths col-lg-3 col-xs-6 person xingdong zz" id="person1">
+    <h3> Eminem </h3>
+    <p class="title"> 回答者身份： </p>
+    <p> 亲属 </p>
+    <p class="title"> 疾病名称： </p>
+    <p> 行动受限 </p>
+  </div>
+  <div class="m-1 float-left col-sm-4 col-md-5ths col-lg-3 col-xs-6 person yinshi zz">
+    <h3> Eminem </h3>
+    <p class="title"> 回答者身份： </p>
+    <p> 亲属 </p>
+    <p class="title"> 疾病名称： </p>
+    <p> 饮食受限 </p>
+  </div>
+  <div class="m-1 float-left col-sm-4 col-md-5ths col-lg-3 col-xs-6 person yinshi zz">
+    <h3> Eminem </h3>
+    <p class="title"> 回答者身份： </p>
+    <p> 亲属 </p>
+    <p class="title"> 疾病名称： </p>
+    <p> 饮食受限222 </p>
+  </div>
+  <div class="m-1 float-left col-sm-4 col-md-5ths col-lg-3 col-xs-6 person zz xingxiang">
+    <h3> Eminem </h3>
+    <p class="title"> 回答者身份： </p>
+    <p> 亲属 </p>
+    <p class="title"> 疾病名称： </p>
+    <p> 形象受损 </p>
+  </div> -->
+
+
+  <!-- <div class="m-1 float-left col-sm-4 col-md-5ths col-lg-3 col-xs-6 person ZLKJ quezheng">
+    <h3> Eminem </h3>
+    <p class="title"> 回答者身份： </p>
+    <p> 亲属 </p>
+    <p class="title"> 疾病名称： </p>
+    <p> 难以确诊 </p>
+  </div>
+  <div class="m-1 float-left col-sm-4 col-md-5ths col-lg-3 col-xs-6 person ZLKJ quezheng">
+    <h3> Eminem </h3>
+    <p class="title"> 回答者身份： </p>
+    <p> 亲属 </p>
+    <p class="title"> 疾病名称： </p>
+    <p> 难以确诊 </p>
+  </div>
+  <div class="m-1 float-left col-sm-4 col-md-5ths col-lg-3 col-xs-6 person ZLKJ zhiyu">
+    <h3> Eminem </h3>
+    <p class="title"> 回答者身份： </p>
+    <p> 亲属 </p>
+    <p class="title"> 疾病名称： </p>
+    <p> 无法治愈 </p>
+  </div>
+  <div class="m-1 float-left col-sm-4 col-md-5ths col-lg-3 col-xs-6 person ZLKJ gui">
+    <h3> Eminem </h3>
+    <p class="title"> 回答者身份： </p>
+    <p> 亲属 </p>
+    <p class="title"> 疾病名称： </p>
+    <p> 费用昂贵 </p>
+  </div> -->
+
+<!-- </div> -->
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="file:///Macintosh HD/Users/lijialei/Downloads/知乎数据库-Excel导入功能/知乎数据库/知乎数据库/js/bootstrap.js"></script>
+<script src="file:///Macintosh HD/Users/lijialei/Downloads/知乎数据库-Excel导入功能/知乎数据库/知乎数据库/js/xlsx.full.min.js"></script>
+
+<script>
+            /*
+            FileReader共有4种读取方法：
+            1.readAsArrayBuffer(file)：将文件读取为ArrayBuffer。
+            2.readAsBinaryString(file)：将文件读取为二进制字符串
+            3.readAsDataURL(file)：将文件读取为Data URL
+            4.readAsText(file, [encoding])：将文件读取为文本，encoding缺省值为'UTF-8'
+                         */
+  		var wb; //读取完成的数据
+        var aa = [];
+        var text = [];
+        var rABS = false; //是否将文件读取为二进制字符串
+        const classDictionary={
+          ZZ:{
+            "main":"zz",
+            "childrenToClass":{
+              "1":"xingdong",
+              "2":"yinshi",
+              "3":"xingxiang",
+              "4":"zhili",
+				"5":"qita"
+            },
+            "childrenDescription":{
+              "1":"行动受限",
+              "2":"饮食受限",
+              "3":"形象受损",
+              "4":"精神、智力",
+				"5":"其他"
+            }
+          },
+          ZL:{
+            "main":"zl",
+            "childrenToClass":{
+               "1":"NYQZ",
+              "2":"FYAG",
+              "3":"WFZL",
+              "4":"YSTD",
+              "5":"YLZY",
+				"6":"WY",
+				"7":"JTZC"
+            },
+            "childrenDescription":{
+              
+            }
+          },
+			
+          SF:{
+            "main":"sf",
+            "childrenToClass":{
+         
+                "1":"ziji",
+              "2":"jiashu",
+				"3":"pangguan"
+            },
+            "childrenDescription":{
+              
+            }
+          },
+          SHRH:{
+            "main":"shrh",
+            "childrenToClass":{
+             "1":"QSCX",
+              "2":"BL",
+              "3":"GZ",
+              "4":"SY",
+				"5":"JY"
+            },
+            "childrenDescription":{
+              
+            }
+          }
+		  }
+          
+  
+  // function updateFile(obj){
+  //   if (!obj.files) {
+  //               return;
+  //           }
+  //           const IMPORTFILE_MAXSIZE = 1 * 2048; //这里可以自定义控制导入文件大小
+  //           var suffix = obj.files[0].name.split(".")[1]
+  //           if (suffix != 'xls' && suffix != 'xlsx') {
+  //               alert('导入的文件格式不正确!')
+  //               return
+  //           }
+  //           if (obj.files[0].size / 1024 > IMPORTFILE_MAXSIZE) {
+  //               alert('导入的表格文件不能大于2M')
+  //               return
+  //           }
+  //           var f = obj.files[0];
+  //           var reader = new FileReader();
+  //           reader.onload = function (e) {
+  //               var data = e.target.result;
+  //               if (rABS) {
+  //                   wb = XLSX.read(btoa(fixdata(data)), { //手动转化
+  //                       type: 'base64'
+  //                   });
+  //               } else {
+  //                   wb = XLSX.read(data, {
+  //                       type: 'binary'
+  //                   });
+  //               }
+  //               //wb.SheetNames[0]是获取Sheets中第一个Sheet的名字
+  //               //wb.Sheets[Sheet名]获取第一个Sheet的数据
+  //               aa = JSON.stringify(XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[2]]));
+  //               var u = eval('(' + aa + ')');
+  //               alert(u)
+  //               console.log(u);
+  //               handleSheetData(u);
+
+  //           };
+  //           if (rABS) {
+  //               reader.readAsArrayBuffer(f);
+  //           } else {
+  //               reader.readAsBinaryString(f);
+  //           }
+  // }
+
+  var u=[
+    {'id':"1",author_name: 'Eminem', '回答者分类': 2, '回答者身份': '患者家属', '疾病名称': '进行性肌营养不良症', '症状': 1, '治疗': '-', '心理': 3, '融合': '-', '症状描述': ' 如果身体歪了一定得需要人扶正，深刻的记得有次我哥一个人在家时一不小心向前倒了，起不来，压住了呼吸，我爸中午回家时（我爸为了照顾我哥每天中午都会回家）才发现我哥的脸已经涨的通红，嘴唇发紫，要是再晚一点，可能窒息。', '治疗描述': '      ', '心理描述': '有时候看他喘不过气来,真的很心痛。  ', '融合描述': '-'},
+    {'id':"2",author_name: '匿名用户', '回答者分类': 1, '回答者身份': '患者自己', '疾病名称': '重症肌无力', '症状': '1,2', '治疗': '-', '心理': '1,3', '融合': '-', '症状描述': '因为发烧感染加重肌无力,不能自理。之后咀嚼无力,药也吃不下,医生劝了插胃管,我对异物排斥很厉害,胃管是护士用蛮力插进去的,嗯能感受到血,哭着挣扎,插完之后口腔分泌物太多,呛住了,', '治疗描述': '      ', '心理描述': '每每发作我都很难过很想哭,少则几十分钟,多则一个晚上,不明白自己为什么会遭受这些,很想无后顾之忧得去闯,而不是在无休止担心怎么爬上去睡觉,怎么穿衣服吃饭,怎么爬楼梯上课  不敢和任何人说,骗教官说自己感冒头晕,可能有人问我干嘛不直接回家回宿舍,因为老师说了不军训的病假必须要有诊断证明,你们能明白我特别介意会因为生病而被区分开的心情吗？', '融合描述': '-'},
+    {'id':"3",author_name: '盐选推荐', '回答者分类': 3, '回答者身份': '旁观者', '疾病名称': '妥瑞氏症', '症状': 1, '治疗': '-', '心理': '-', '融合': 1, '症状描述': '抽搐痉挛,常常极易被催眠和接受暗示,还会不由自主地重复和模仿。', '治疗描述': '      ', '心理描述': '  ', '融合描述': '他有一份好工作,婚姻幸福,但他走在街上总会引起所有人的注意；从 5 岁起,他每天都要接受旁人投来的惊恐或厌恶的目光。'},
+]
+console.log(u);
+handleSheetData(u);
+
+
+  function handleSheetData(arrData){
+    let targetDiv =document.createElement("div");
+	let target2Div =document.createElement("div");
+    targetDiv.setAttribute("class","container");
+	  target2Div.setAttribute("class","contents");
+
+    for(let p of arrData){
+      if(p["author_name"]!==undefined){//去除掉第二行(第一行默认是标题)
+        let _personDiv =document.createElement("div");
+		let _contentDiv= document.createElement("div");
+        let _personDiv_className ="m-1 float-left col-sm-4 col-md-5ths col-lg-3 col-xs-6 person "
+		let _contentDiv_className="content"
+		let _personDiv_id = p["id"];
+		_contentDiv_className+=" "+p["id"];
+		
+		
+	
+		
+        let h3 =document.createElement("h3"),h3_text =document.createTextNode(p.author_name);
+		let h3_2 =document.createElement("h3"),h3_2_text =document.createTextNode(p.author_name);
+        h3.appendChild(h3_text);
+		h3_2.appendChild(h3_2_text);
+
+        let p_SF_head =document.createElement("p"),p_SF_head_text =document.createTextNode("回答者身份");
+        p_SF_head.setAttribute("class","title");
+        p_SF_head.appendChild(p_SF_head_text);
+        let p_SF =document.createElement("p"),p_SF_text =document.createTextNode(p["回答者身份"]); 
+        p_SF.appendChild(p_SF_text);
+		  
+		let p_SF_head_2 =document.createElement("p"),p_SF_head_text_2 =document.createTextNode("回答者身份");
+        p_SF_head_2.setAttribute("class","title");
+        p_SF_head_2.appendChild(p_SF_head_text_2);
+        let p_SF_2 =document.createElement("p"),p_SF_text_2 =document.createTextNode(p["回答者身份"]); 
+        p_SF_2.appendChild(p_SF_text_2);
+		  
+
+        let p_MM_head =document.createElement("p"),p_MM_head_text =document.createTextNode("疾病名称");
+        p_MM_head.setAttribute("class","title");
+        p_MM_head.appendChild(p_MM_head_text);
+        let p_MM =document.createElement("p"),p_MM_text =document.createTextNode(p["疾病名称"]); 
+        p_MM.appendChild(p_MM_text);
+		  
+		let p_MM_head_2 =document.createElement("p"),p_MM_head_text_2 =document.createTextNode("疾病名称");
+        p_MM_head_2.setAttribute("class","title");
+        p_MM_head_2.appendChild(p_MM_head_text_2);
+        let p_MM_2 =document.createElement("p"),p_MM_text_2 =document.createTextNode(p["疾病名称"]); 
+        p_MM_2.appendChild(p_MM_text_2);
+		  
+		  
+		  
+		  
+		  
+
+        //追加相应分类信息到此div class中
+        if(p["症状"]!==undefined){
+          //切割字符串
+          let arr =p["症状"].toString().split(",");
+          for(let e of arr){
+            if(!isNaN(parseInt(e))){//如果能转化为数字，根据对应关系，添加class
+              _personDiv_className+=" "+classDictionary.ZZ.childrenToClass[e];
+            }
+            else{//非数字则为“其他”，单独添加类或其他操作
+
+            }
+          }
+        }
+        if(p["治疗"]!==undefined){
+          //切割字符串
+          let arr =p["治疗"].toString().split(",");
+          for(let e of arr){
+            if(!isNaN(parseInt(e))){//如果能转化为数字，根据对应关系，添加class
+              _personDiv_className+=" "+classDictionary.ZL.childrenToClass[e];
+            }
+            else{//非数字则为“其他”，单独添加类或其他操作
+
+            }
+          }
+        }
+		  if(p["回答者分类"]!==undefined){
+          //切割字符串
+          let arr =p["回答者分类"].toString().split(",");
+          for(let e of arr){
+            if(!isNaN(parseInt(e))){//如果能转化为数字，根据对应关系，添加class
+              _personDiv_className+=" "+classDictionary.SF.childrenToClass[e];
+            }
+            else{//非数字则为“其他”，单独添加类或其他操作
+
+            }
+          }
+        }
+		  
+		  if(p["社会融合"]!==undefined){
+          //切割字符串
+          let arr =p["社会融合"].toString().split(",");
+          for(let e of arr){
+            if(!isNaN(parseInt(e))){//如果能转化为数字，根据对应关系，添加class
+              _personDiv_className+=" "+classDictionary.SHRH.childrenToClass[e];
+            }
+            else{//非数字则为“其他”，单独添加类或其他操作
+
+            }
+          }
+        }
+//        if(p[""]!==undefined){
+//          //切割字符串
+//          let arr =p["心理"].toString().split(",");
+//          for(let e of arr){
+//            if(!isNaN(parseInt(e))){//如果能转化为数字，根据对应关系，添加class
+//              _personDiv_className+=" "+classDictionary.sf.childrenToClass[e];
+//            }
+//            else{//非数字则为“其他”，单独添加类或其他操作
+//
+//            }
+//          }
+//        }
+        if(p["融合"]!==undefined){
+          //切割字符串
+          let arr =p["融合"].toString().split(",");
+          for(let e of arr){
+            if(!isNaN(parseInt(e))){//如果能转化为数字，根据对应关系，添加class
+              _personDiv_className+=" "+classDictionary.SHRH.childrenToClass[e];
+            }
+            else{//非数字则为“其他”，单独添加类或其他操作
+
+            }
+          }
+        }
+		  
+		  
+       
+
+        //设置div  class属性
+        _personDiv.setAttribute("class",_personDiv_className);
+		  _personDiv.setAttribute("id",_personDiv_id );
+		 
+		_contentDiv.setAttribute("class",_contentDiv_className);
+        //加入子节点
+        _personDiv.appendChild(h3);
+        _personDiv.appendChild(p_SF_head);
+        _personDiv.appendChild(p_SF);
+        _personDiv.appendChild(p_MM_head);
+        _personDiv.appendChild(p_MM);
+		  
+		_contentDiv.appendChild(h3_2);
+        _contentDiv.appendChild(p_SF_head_2);
+        _contentDiv.appendChild(p_SF_2);
+        _contentDiv.appendChild(p_MM_head_2);
+        _contentDiv.appendChild(p_MM_2);
+		  
+        //将整个div加入大Div中
+        targetDiv.appendChild(_personDiv);
+		target2Div.appendChild(_contentDiv);
+		  
+		_contentDiv.appendChild("<div class='close'>X</div>")
+      }
+    }
+
+    //循环结束后，再把包裹着上千个div的大div添加进页面中（一次一次添加会影响性能）
+    document.body.appendChild(targetDiv);
+	  document.body.appendChild(target2Div);
+  }
+	
+	
+	$(function(){
+		$(".close").click(function(event){
+			$(this).parent().hide()
+		})
+	})
+	
+	$(function(){
+		$(".person").click(function(event){
+			var targetid =$(this).attr("id");
+			$("."+targetid ).show();
+		})
+		
+	})
+	
+	 $(function () {
+      //对应关系字典
+       var dictionary_all = {
+        "全部": "person",
+        "行动受限": "xingdong",
+        "饮食受限": "yinshi",
+        "形象受损": "xingxiang",
+        "精神智力问题": "zhili",
+        "其他": "qita",
+        "难以确诊": "NYQZ",
+        "无法治愈": "WFZY",
+        "费用昂贵": "FYAG",
+        "医生态度问题": "YSTD",
+        "无药": "WY",
+        "家庭不支持": "JTZC",
+        "患者自己": "ziji",
+        "患者家属": "jiashu",
+        "旁观者": "pangguan",
+        "歧视与不尊重": "QSCX",
+        "影响恋爱结婚": "BL",
+        "影响生子": "SY",
+        "影响工作": "GZ",
+        "影响教育": "JY",	   
+      }
+	   
+      var selectAll_all_flag;
+
+      function initialize() {//函数作用：初始化界面的一些参数
+        //显示所有症状内容
+        selectAll_all_flag = true;
+        showElementsByClassName(dictionary_all["全部"], true);
+        
+        // $("#tag-allZZ>p").addClass("checked-tag");//给症状的“全部”标签添加选中class
+        // $("#tag-allZLKJ>p").addClass("checked-tag");//给治疗的“全部”标签添加选中class
+      }
+
+      function showElementsByClassName(className, bool_show) {//函数作用：根据class名称改变元素的显示
+        var targetList = document.getElementsByClassName(className);//获取对应的元素列表
+        //遍历元素列表改变它们的显示
+        for (let element of targetList) {
+          element.style.display = bool_show == true ? "" : "none";//三元运算符
+        }
+      }
+      //用户交互前的页面初始化
+      initialize();
+
+
+
+      // var selectAll_all_flag;
+
+    
+        $("#mulu").click(function(event){
+		
+      var targetText =event.target.innerHTML;//获取触发元素的内容
+      // alert(targetText)
+      
+      if(['全部', '行动受限', '饮食受限', '形象受损', '精神智力问题', '其他', '难以确诊', '无法治愈', '费用昂贵', '医生态度问题', '无药', '家庭不支持', '患者自己', '患者家属', '旁观者', '歧视与不尊重', '影响恋爱结婚', '影响生子', '影响工作', '影响教育'].indexOf(targetText)>=0){
+        var checkedFlag= event.target.classList.contains("checked-tag");//该标签是否有这个class,有则说明之前是选中的
+      // showElementsByClassName(dictionary_all[targetText],!checkedFlag); 
+
+      //根据之前的状态进行增加或者移除class
+      if(checkedFlag){
+      event.target.classList.remove("checked-tag");
+      }
+      else{
+      event.target.classList.add("checked-tag");
+      }
+
+      var tagText=new Array()
+      $(".checked-tag").each(function(){
+      tagText.push($(this).text())
+      // alert(tagText)
+      })
+
+      function filterclass(){
+       var classall;
+       showElementsByClassName(dictionary_all["全部"],true);
+       $(".person").each(function(){
+        //  if($(this).css('display')!='none'){
+          classall=$(this).attr("class");
+          // alert(classall);
+          for (let tagitem of tagText){
+            if(classall.indexOf(dictionary_all[tagitem]) == -1){
+              $(this).css('display','none');
+            }
+            ;
+         };
+
+      })
+      }
+
+      filterclass();
+        
+      }else{
+       
+      }
+
+      // if(targetText !=="全部"){
+      //   if(selectAll_all_flag) {//如果为真，则说明点击之前是全选中的状态，则需要先隐藏此模块内所有的person
+      //     showElementsByClassName(dictionary_all["全部"],false);
+      //     selectAll_all_flag =false;
+      //     $("#mulu>p").removeClass("checked-tag");//给症状的“全部”标签取消选中class
+      //   }
+      // }else{
+      //   $(".checked-tag").removeClass("checked-tag");
+      //   showElementsByClassName(dictionary_all["全部"],checkedFlag);
+      //   // selectAll_ZZ_flag=true;
+
+      // }
+
+      
+
+      });
+
+
+
+    })
+
+
+
+
+	
+	
+	</script>
+</body>
+</html>
